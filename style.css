@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vn;
+    width: 100%;
+}
+.section .boxVideo{
+    width: 50%;
+    position: relative;
+    height: 50vh;
+    
+    border: 4px solid rgb(17, 17, 17);
+    transition: all .3s ease;
+    
+}
+
+.section .boxVideo video{
+    position: absolute;
+    height: 50vh;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    filter:blur(3px);
+    transition: all .3s ease;
+}
+.section .boxVideo video:hover{
+    filter:blur(0px);
+}
+
+/*responsive*/
+
+@media (max-width: 991px) {
+    .section .boxVideo{
+        width: 100%
+    }
+    }

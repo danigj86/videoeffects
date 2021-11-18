@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="section">
+        <!--box video start-->
+        <div class="boxVideo">
+            <video src="kitesurf.mp4" type="video/mp4" muted="muted" class="clip"></video>
+        </div>
+        <!--box video end-->
+        <!--box video start-->
+        <div class="boxVideo">
+            <video src="goku.mp4" type="video/mp4" muted="muted" loop class="clip"></video>
+        </div>
+        <!--box video end-->
+        <!--box video start-->
+        <div class="boxVideo">
+            <video src="surf.mp4" type="video/mp4" muted="muted" loop class="clip"></video>
+        </div>
+        <!--box video end-->
+        <!--box video start-->
+        <div class="boxVideo">
+            <video src="boxeo.mp4" type="video/mp4" muted="muted" loop class="clip"></video>
+        </div>
+        <!--box video end-->
+    </div>
+
+    <script>
+       const clip = document.querySelectorAll('.clip');
+
+       clip.forEach(function(clip){
+           /* console.log(clip.getAttribute('src')); */
+           clip.addEventListener('mouseenter',(event)=>{
+               clip.play();
+           });
+           clip.addEventListener('mouseout',(event)=>{
+               clip.pause();
+           });
+       })
+
+       console.log(clip);
+    </script>
+</body>
+</html>
